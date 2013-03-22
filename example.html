@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            border: 4px solid lime;
+        }        
+        li {
+            display: block;
+            background: lavenderblush;
+            padding: 1em;
+        }
+        li:nth-of-type(2n+1) {
+            background: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flip down 2000</h1>
+
+    <h2>Appended elements flip down 2000</h2>
+    <ul id="list-1">
+        <li>Apa</li>
+        <li>Sto</li>
+    </ul>
+    
+    <h2>Hidden elements flip down 2000</h2>
+    <ul id="list-2">
+        <li>Apa</li>
+        <li>Sto</li>
+        <li style="display:none">Groda</li>
+        <li style="display:none">Imse<br>vimse<br>spindel</li>
+        <li style="display:none">Snigel</li>
+    </ul>
+    <button>Flip down 2000</button>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!--<script src="lib/jquery.flipdown2000.js"></script>-->
+    <script src="lib/jquery.flipdown2000.min.js"></script>
+    <script>
+        $(function () {
+            $('button').click(function () {
+                $('<li>Groda</li><li>Imse<br>vimse<br>spindel</li><li>Snigel</li>').appendTo('#list-1').flipDown2000();
+                $('#list-2').find('li:nth-child(n+3)').flipDown2000();
+            });
+        });
+    </script>
+</body>
+</html>

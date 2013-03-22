@@ -1,0 +1,13 @@
+{
+	"dependencies": [ "anvil.uglify" ],
+	"anvil.uglify": {
+		"all": true
+	},
+    "anvil.identify": {
+        "continuous": true
+	},
+	"log": {
+		"debug": true
+	},
+	"host": false
+}
